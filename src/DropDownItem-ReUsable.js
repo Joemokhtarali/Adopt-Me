@@ -4,8 +4,8 @@ import "../styles/dropdown.css";
 
 const DropDownItem = (props) => {
   return (
-    <div>
-      <h6 className="dropDownItem">
+    <div className="dropDownItem">
+      <h6>
         <BiCheck /> {props.section}
       </h6>
     </div>

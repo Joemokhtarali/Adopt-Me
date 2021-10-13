@@ -1,40 +1,63 @@
-.DropDownMenu {
+.moreFilters {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.DropDownMenu {
+  /* display: flex; */
+  flex-direction: row;
   width: auto;
+  margin: auto;
+
+  position: absolute;
 }
 
 .dropDownItem {
+  display: block;
+
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Dropdown Button */
 .dropbtn {
+  display: block;
   background-color: white;
-  /* color: black; */
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 12px;
+  font-size: 14px;
   border: none;
   border: #d3d3d3 solid 0.5px;
   border-radius: 25px;
+  cursor: pointer;
+  max-width: 200px;
+  text-align: center;
 }
 
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   position: relative;
   display: inline-block;
+  margin: 10px;
 }
 
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
   min-width: 160px;
+  max-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -57,7 +80,46 @@
   display: block;
 }
 
+.dropbtn:hover {
+  background-color: black;
+  color: white;
+}
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /* .dropdown:hover .dropbtn { */
 /* background-color: gray; */
 /* } */
+
+.dropbtn-reset {
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  max-width: 160px;
+  text-align: center;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+@media only screen and (max-width: 600px) {
+  .DropDownMenu {
+    flex-direction: column;
+  }
+  .moreFilters {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .dropbtn {
+    max-width: 150px;
+    text-align: left;
+  }
+  .dropbtn-reset {
+    padding-left: 50px;
+  }
+}
